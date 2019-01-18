@@ -1,0 +1,67 @@
+if(isModule){
+    apply plugin: 'com.android.application'
+}else{
+    apply plugin: 'com.android.library'
+}
+
+android {
+    compileSdkVersion versions.compileSdkVersion
+    buildToolsVersion versions.buildToolsVersion
+    defaultConfig {
+        if(isModule){
+            buildConfigField ('boolean', 'isMoudle', "true")
+        }else{
+            buildConfigField ('boolean', 'isMoudle', "false")
+        }
+        if (isModule){
+            applicationId  appid.bjxNews
+        }
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [ moduleName : project.getName() ]
+            }
+        }
+        //资源配置
+        sourceSets{
+            main{
+                //在组件模式下 使用不同的manifest文件
+                if(isModule){
+                    manifest.srcFile 'src/main/runalone/AndroidManifest.xml'
+                    java.srcDirs 'src/main/runalone'
+                }else{
+                    manifest.srcFile 'src/main/AndroidManifest.xml'
+                    java.srcDirs 'src/main/java'
+                }
+            }
+        }
+        minSdkVersion versions.minSdkVersion
+        targetSdkVersion versions.targetSdkVersion
+        versionCode versions.versionCode
+        versionName versions.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation deps.support.v7.appcompat
+    implementation deps.support.constraint
+    testImplementation deps.junit
+    androidTestImplementation deps.support.test.runner
+    androidTestImplementation deps.support.test.espresso
+    androidTestCompile('com.android.support:support-annotations:27.0.0') {
+        force = true
+    }
+    annotationProcessor project(':bjxRouterProcessor')
+    implementation project(':bjxRouterCommon')
+}

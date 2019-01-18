@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#999999"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/btnGotoNews"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAllCaps="false"
+        android:text="startActivity" />
+
+    <Button
+        android:id="@+id/btnGotoNewsForResult"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAllCaps="false"
+        android:text="startActivityForResult" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/btnBackNews"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/btnError"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="错误测试" />
+
+
+</LinearLayout>
