@@ -53,29 +53,29 @@ apt：[https://www.jianshu.com/p/13b9adb17010](https://www.jianshu.com/p/13b9adb
 
 - startActivityForResult
 		
-		  BjxSuperRouter.getInstance().build("/bjxNews/BjxNewActivity").withBundle(bundle).navigation(BjxCommunityActivity.this, 203);
+		BjxSuperRouter.getInstance().build("/bjxNews/BjxNewActivity").withBundle(bundle).navigation(BjxCommunityActivity.this, 203);
 
 - 传参和跳转监听
 
-			    Bundle bundle = new Bundle();
-                bundle.putString("name", "古力娜扎-巴扎黑");
-                bundle.putInt("age", 458853);
-                BjxSuperRouter.getInstance().build("/bjxNews/BjxNewActivity").withBundle(bundle).navigation(BjxCommunityActivity.this, 203, new NavigationCallback() {
-                    @Override
-                    public void onFound(PostCard postcard) {
-                        Log.d("router","onFound:"+postcard.toString());
-                    }
+		Bundle bundle = new Bundle();
+        bundle.putString("name", "古力娜扎-巴扎黑");
+        bundle.putInt("age", 458853);
+        BjxSuperRouter.getInstance().build("/bjxNews/BjxNewActivity").withBundle(bundle).navigation(BjxCommunityActivity.this, 203, new NavigationCallback() {
+            @Override
+            public void onFound(PostCard postcard) {
+                Log.d("router","onFound:"+postcard.toString());
+            }
 
-                    @Override
-                    public void onLost(PostCard postcard) {
-                        Log.d("router","onLost:"+postcard.toString());
-                    }
+            @Override
+            public void onLost(PostCard postcard) {
+                Log.d("router","onLost:"+postcard.toString());
+            }
 
-                    @Override
-                    public void onArrival(PostCard postcard) {
-                        Log.d("router","onArrival:"+postcard.toString());
-                    }
-                });
+            @Override
+            public void onArrival(PostCard postcard) {
+                Log.d("router","onArrival:"+postcard.toString());
+            }
+        });
 
 ### 将module单独打包apk运行 ###
 
