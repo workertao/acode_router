@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/acode_router.iml" filepath="$PROJECT_DIR$/acode_router.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/bjxCommunity/bjxCommunity.iml" filepath="$PROJECT_DIR$/bjxCommunity/bjxCommunity.iml" />
       <module fileurl="file://$PROJECT_DIR$/bjxNews/bjxNews.iml" filepath="$PROJECT_DIR$/bjxNews/bjxNews.iml" />
       <module fileurl="file://$PROJECT_DIR$/bjxRouterAnnotation/bjxRouterAnnotation.iml" filepath="$PROJECT_DIR$/bjxRouterAnnotation/bjxRouterAnnotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/bjxRouterCommon/bjxRouterCommon.iml" filepath="$PROJECT_DIR$/bjxRouterCommon/bjxRouterCommon.iml" />
       <module fileurl="file://$PROJECT_DIR$/bjxRouterProcessor/bjxRouterProcessor.iml" filepath="$PROJECT_DIR$/bjxRouterProcessor/bjxRouterProcessor.iml" />
-      <module fileurl="file://E:\toutiao\bjxRouterProcessor\bjx_router_processor.iml" filepath="E:\toutiao\bjxRouterProcessor\bjx_router_processor.iml" />
-      <module fileurl="file://E:\toutiao\bjxRouterAnnotation\testAnnotation.iml" filepath="E:\toutiao\bjxRouterAnnotation\testAnnotation.iml" />
-      <module fileurl="file://$PROJECT_DIR$/toutiao.iml" filepath="$PROJECT_DIR$/toutiao.iml" />
     </modules>
   </component>
 </project>
