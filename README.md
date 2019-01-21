@@ -11,7 +11,7 @@ apt：[https://www.jianshu.com/p/13b9adb17010](https://www.jianshu.com/p/13b9adb
 
 这两天在研究阿里的Arouter，画了一张图记录下。
 
-![阿里路由](https://raw.githubusercontent.com/workertao/acode_router/master/img/arouter.jpg)
+![阿里路由](https://raw.githubusercontent.com/workertao/acode_router/master/img/arouter.png)
 
 首先我们给业务组件的Activity增加注解，在编译的过程中，通过APT(Annotation Processing Tool)是一种处理注释的工具，它对源代码文件进行检测找出其中的注解，使用注解进行额外的处理。然后使用javapoet生成相应的代码。最后会在build文件中生成两个相应的类文件(此处说两个是参照Arouter，数量无上限，完全自定义)。
 
